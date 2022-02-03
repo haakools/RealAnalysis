@@ -13,5 +13,5 @@ This will also help both my GitHub and LaTeX skills in commiting regularly throu
 And lastly honing soft skills by doing constructive writing, communicating techincal aspects and simplifying abstract concepts.
 
 # Note:
-Many defintions will be verbatum of what is written, although tweaks and additions which is found to give a better insight.
+Many defintions will be verbatum of what is written in the textbook. However tweaks and additional statements which is found to give a better insight is included. 
 
