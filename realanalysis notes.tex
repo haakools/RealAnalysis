@@ -1,4 +1,4 @@
-\documentclass[12pt,fleqn,leqno,letterpaper]{article}
+\documentclass[12pt,letterpaper]{article}
 
 
 \usepackage{amsmath}
@@ -8,11 +8,11 @@
 
 \title{Real Analaysis Notes}
 \author{Håkon Berggren Olsen\\
-  \small{Class Number - Class Name}\\
-  \small{Your Educational Institution}\\
-  \small{\texttt{email@address.com}}
+  \small{MAT2400- Real Analisys}\\
+  \small{University of Oslo}\\
+  \small{hakonberggren@gmail.com}
 }
-\date{Jan 2022}
+\date{Spring 2022}
 
 \begin{document}
  
@@ -20,6 +20,7 @@
 
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{De Morgan's Laws}
 These laws state that the complement of 
 \begin{align*}
@@ -27,6 +28,91 @@ These laws state that the complement of
 	\text{(ii)} \quad  (A_1 \cap A_2 \cap... \cap A_n)^c = A_1^c \cup A_2^c \cup ... \cup...A_n^c \\
 \end{align*}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Families of sets}
+A collection of sets, think set of sets, is usually called a family. An example is the family
+
+\begin{align*}
+	\mathbb{A} = \{[a,b] | a,b \in \mathbb{R}\}
+\end{align*}
+of all closed and bounded intervals on the real line. \\
+
+
+\noindent \\
+\section*{Functions}
+If $\mathbf{A}$ is a subset of $X$, the set $f(A) \subset Y$ defined by
+
+
+\begin{align*}
+	f(A) = v\{ f(a) | a \in A\}
+\end{align*}
+
+is called the \textit{images of $A$ under $f$}. 
+
+\noindent \\
+If $B$ is a subset of $Y$, the set $f^{-1}(B) \subset X$ is defined by
+
+\begin{align*}
+	f^{-1}(B) = \{ x | x \in B\}
+\end{align*}
+Note that the inverse function only is defined when the funciton is bijective. However the inverse images $f^{-1}(B)$ that is studied above are defined for all functions $f$.
+
+\section*{Relations and partitions}
+Relations are an abstract way of relating something to each other. Tangible examples of this can be the difference in magnitude (denoted by less than or greater than signs), angle(s) between vectors, similiar matricies and properties thereof. Below is an abstract defintions of such relations. \\
+
+\noindent
+$\bold{Defintion}$: By a relation on a set $X$, we mean a subset $R$ of the carteisan product $X \times X$. We usually write $xRy$ instead of $(x,y) \in \mathbb{R}$ to denote that $x$ and $y$ are related. The symbols $\sim$ and $\equiv$  \footnote{the \LaTeX\  symbol for these signs are ''sim'' and ''equiv''} are often used to denote relations, and we then write $x\sim y$ and $x \equiv y$.
+
+$\bold{Example}$: Equality (denoted by the symbol $=$) and less than ($<$)  are relations on $\mathbb{R}$. To see that they fit into the formal definition above, note that they can be defines as 
+\begin{align*}
+	R &= \{(x,y) \in \mathbb{R}^2 | x = y\} \\
+	S &= \{(x,y) \in \mathbb{R}^2 | x < y\} 
+\end{align*}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Completeness}
+Some key defintions for central terms are 
+\begin{itemize}
+	\item $\bold{Bounded-above}$- A is bounded above if there is a number $b\in\mathbf{R}$ such that $b\ge a$ for all $a\in A$.
+	\item $\bold{Bounded-above}$ - 
+	\item $\bold{Bounded-below}$ - A is bounded below if there is a number $c\in\mathbf{R}$ such that $c\le a$ for all $a\in A$.
+	\item $\bold{Bounded-above}$ - 
+\end{itemize}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{Interrmediate Value Theorem}
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{The Bolzano-Weierstrass Theorem}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{The Extreme Value Theorem}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section*{The Mean Value Theorem}
+Assume that $f : [a,b] \to \mathbf{R}$ is continous in all of $[a,b]$ and differentiable at all inner points $x \in (a,b)$. Then there is a point $c \in (a,b)$ such that 
+
+\begin{align*}
+	f'(c) &= \frac{f(b)-f(a)}{b-a} \\
+\end{align*}
+
+\noindent \\
+Include graph for clarity's sake.
 
 % -- Bibliography (APA style)
 \bibliography{references}
