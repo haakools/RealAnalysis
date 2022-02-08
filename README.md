@@ -2,7 +2,7 @@
 
 This github is for the collection of notes and textbook relating to the Real Analysis course MAT2400 at the University of Oslo, Spring 2022. 
 
-The main PDF document will consist of boiled down LaTeX notes following the textbook Lindstrøm 20xx. 
+The main PDF document will consist of boiled down LaTeX notes following the textbook Lindstrøm T., 2017.
 
 The aim of this document are several. 
 
@@ -13,5 +13,5 @@ This will also help both my GitHub and LaTeX skills in commiting regularly throu
 And lastly honing soft skills by doing constructive writing, communicating techincal aspects and simplifying abstract concepts.
 
 # Note:
-Many defintions will be verbatum of what is written in the textbook. However tweaks and additional statements which is found to give a better insight is included. 
+Many defintions will be verbatum of what is written in the Lindstrøm, T. 2017. However tweaks and additional statements which is found to give a better insight is included. 
 

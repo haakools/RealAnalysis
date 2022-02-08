@@ -1,0 +1,96 @@
+\documentclass[12pt,letterpaper]{article}
+
+
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amsthm}
+
+
+\title{Mandatory Assignment 1 of 2}
+\author{Håkon Berggren Olsen\\
+  \small{MAT2400- Real Analisys}\\
+  \small{University of Oslo}\\
+  \small{hakonberggren@gmail.com}
+}
+\date{Spring 2022}
+
+\begin{document}
+\maketitle
+\newpage 
+ 
+\section*{Problem 1}
+ 
+ Let $X$ be the set of all sequences $\{x_n\}_{n\in \mathbb{N}}$ of real numbers such that $lim_{n\to \infty} x_n = 0$.\\
+ \noindent \\
+ a) Use the definiton of converge to show that if ${x_n}\in X$, then there is a $K\in \mathbb{N}$ such that $|x_K|=\text{sup}\{|x_n| : n\in \mathbb{N} \}$ (i.e. $x_K$ is an element of maximal absolute value).\\
+ \noindent \\
+ 
+ Definition of convergence:\\
+ A sequence $\{x_n\}$ of real numbers converges to $a\in\mathbb{R}$ if for every $\epsilon >0$ (no matter how small), there is an $N\in\mathbb{N}$ such that $|x_n-a|<\epsilon$ for all $n\le N$. We write $lim_{n \to \infty} x_n = a$.\\
+ 
+ (Or in laymans terms: You can always find a point $x_n$ which is arbitrarily close, $\epsilon>0$, to $a$ by going deeper and deeper into the sequence $\{x_n\}$, i.e. choosing larger and larger $N$).
+ 
+ \noindent \\
+ b) Define $d: X \times X \to [0, \infty)$ by
+\begin{align*}
+ 	d(\{x_n\}, \{y_n\}) = \text{sup}\{|x_n-y_n| : n\in \mathbb{N}\}. 
+\end{align*}
+ Show that d is a metric on $X$.\\
+ \noindent \\
+ Definition of a metric:
+ 
+ A metric space $(X,d)$ consits of a nonempty set $X$ and a function $d: X \times X \to [0,\infty)$ such that:
+ \begin{itemize}
+ 	\item (Positivity) For all $x,y\in X$, we have $d(x,y)\ge 0$ with equalitiy if and only if $x=y$.
+ 	\item (Symmetry) For all $x,y \in X$ we have $d(x,y)=d(y,x)$. 
+ 	\item (Triangle Inequality) For all $x,y,z \in X$, we have
+ 		\begin{align*}
+ 			d(x,y) \le d(x,z)+d(z,y)
+ 		\end{align*}
+ \end{itemize}
+ 
+
+ 
+ \noindent \\
+ c)  Let $Y$ be the set of all sequences $ \{y_n\}_{n\in\mathbb{N}}$ of real numbers such that $\sum_{n=1}^{\infty} |y_n| < \infty$. Show that $Y \subseteq X$. Find a sequence $\{x_n\}$ that belongs to $X$ but not to $Y$ (you can use everything you know from calculus).\\
+ 
+ 
+ 
+ \noindent \\
+d) Assume $\{x_n\} \in X \backslash Y$ and let $\epsilon > 0$. Show that the ball $B(\{x_n\}; \epsilon)$ contains elements from $Y$. Explain why this shows that  $Y$ is not closed.\\
+ 
+ 
+ 
+ 
+ \noindent \\
+e) Assume $\{y_n\}\in Y$ and let $\epsilon >0$. Show that $B(\{y_n\};\epsilon)$ contains elements from $X \backslash Y$ Explain why this shows that $Y$ is not open. \\
+ 
+
+
+ 
+ 
+\section*{Problem 2}
+
+A metric space $(X,d$ is called disconnected if there are two non-empty, open subsets $O_1, O_2$ such that $O_1 \cup O_2 = X$ and $O_1 \cap O_2 = \emptyset$. \\
+%DONE
+\noindent \\
+a) Let $X = [0,1] \cup [2,3]$ have the usual metric $d(x,y) = |x-y|$. \\
+The metric space is disconnected as there are two non-empty, open subsets $O_1 = [0,1]$ and $O_2 = [2,3]$ which have the properties 
+\begin{align*}
+	O_1 \cup O_2  &= [0,1] \cup [2,3] = X \\
+	O_1 \cap O_2  &= [0,1] \cap [2,3]  = \emptyset
+\end{align*}
+
+
+
+\noindent \\
+b) Show that $\mathbb{Q}$ with the usual metric $d(x,y)=|x-y|$ is disconnected. \\
+(Hint: Consider $O_1=\{x\in\mathbb{Q} : x^2 > 2\}$ and $O_1=\{x\in\mathbb{Q} : x^2 > 2\}$.)
+
+
+
+
+\noindent \\
+c) Assume that $(X,d)$ is a connected (i.e. not disconnected) metric space and that $f : X \to \mathbb{R}$ is a continous function such that there are two points $a,b \in X$ with $f(a)<0<f(b)$. Show that there is a point $c\in X$ such that $f(c)=0$.(This is an abstract version of the Intermediate Value Theorem.)
+
+\end{document}

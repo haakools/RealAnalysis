@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amsthm}
+\usepackage{ulem}
 
 
 \title{Real Analaysis Notes}
@@ -44,7 +45,7 @@ If $\mathbf{A}$ is a subset of $X$, the set $f(A) \subset Y$ defined by
 
 
 \begin{align*}
-	f(A) = v\{ f(a) | a \in A\}
+	f(A) = \{ f(a) | a \in A\}
 \end{align*}
 
 is called the \textit{images of $A$ under $f$}. 
@@ -100,11 +101,20 @@ The set of natural numbers $\mathbb{N}$ is also countable, listed as $1,2,3,...$
 
 \noindent
 
+$\bold{Propostiion}$ If the sets $A,B$ are countable, so is the cartesian product $A \times B$.
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Completeness}
+
+
+
 Some key defintions for central terms are 
 \begin{itemize}
+	\item \textbf{Bounded} - This just means there is a limit how big (or how small, if one is looking at bounded below) a number in a sequence can get. 
+	\item \textbf{Supremum} - This is the smallest possible upper bound.There are many bounds one can set, but this is the closest one can get to the upper bound. 
+	\item \textbf{Infinitum(?)} - This is the largest possible lower bound. There are many bounds one can set, but this is the closest one can get to the lower bound
 	\item $\bold{Bounded-above}$- A is bounded above if there is a number $b\in\mathbf{R}$ such that $b\ge a$ for all $a\in A$.
 	\item $\bold{Bounded-above}$ - 
 	\item $\bold{Bounded-below}$ - A is bounded below if there is a number $c\in\mathbf{R}$ such that $c\le a$ for all $a\in A$.
@@ -113,6 +123,21 @@ Some key defintions for central terms are
 
 
 
+
+
+
+
+
+\section*{Cauchy Sequences}
+\uline{\textbf{Definition:}} A sequence $\{x_n\}$ of poitns in $\mathbb{R}^d$ is called a \uline{Cauche-sequence} if for every $\epsilon>0$, there is an $N\in\mathbb{N}$ (or viewed as $N(\epsilon)$, such that for all $n,m\ge M$we have  $||\vec{x}_n-\vec{x}_m||<\epsilon$.\\
+\\
+\uline{\textbf{Lemma:}}All convergent sequences are Cauchy sequencess. \\
+\\
+\uline{\textbf{Proof:}} Since $\{\vec{x}_n\}$ converges to a point $\vec{x}$, these are for any $\epsilon >0$ and $N\in\mathbb{N}$ such that if $n\ge N$, then $||\vec{x}_n-\vec{m}||<\frac{\epsilon}{2}$. Hence if  $n,m \ge N$, then 
+
+\begin{align*}
+	||\vec{x}_n-\vec{x}_m|| = ||(\vec{x}_n- \vec{x}_m) + ( \vec{x}- \vec{x}_m)|| \le ||(\vec{x}_n- \vec{x})|| + ||( \vec{x}- \vec{x}_m)|| \le \frac{\epsilon}{2}+\frac{\epsilon}{2} = \epsilon \\
+\end{align*}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Intermediate Value Theorem}
@@ -124,12 +149,61 @@ Some key defintions for central terms are
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{The Bolzano-Weierstrass Theorem}
+\uline{A Preview of Compactness}
+
+Given a sequence $\{\vec{x_m}\}$ is in $\mathbb{R}^d$.
+\begin{align*}
+	\vec{x}_1, \vec{x}_2, \vec{x}_3, \vec{x}_4, \vec{x}_5, \vec{x}_6, \vec{x}_7, \vec{x}_8, \vec{x}_9, ... \\
+\end{align*}
+\uline{Subsequence:} $ \vec{x}_2, \vec{x}_5, \vec{x}_7, \vec{x}_9, ...$ \\
+
+\uline{Formally}: Let $n_1<n_2<n_3<....$ be a strictly increasing sequences of natural numbers. The sequence
+
+\begin{align*}
+	\vec{x}_{n_1}, \vec{x}_{n_2}, \vec{x}_{n_3}...
+\end{align*}
+is called a subsequence of $\{\vec{x}_n \}$.
+
+
+
+\uline{Bolzano-Weierstrass Theorem}: All bounded sequences in $\mathbb{R}^d$ have convergent subsequences. 
+Proof for $d=2$ (2-dimensional case). 
 
 
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{The Extreme Value Theorem}
+If $f:[a,b]\to\mathbb{R}$ is continous defined on a closed and bounded interval, then $f$ has maximum and minimum points on $[a,b]$.
+
+graph here \\
+\\
+\uline{Proof:} Let
+\begin{align*}
+	A = \{ f(x) : x\in[a,b]\}
+\end{align*}
+and put $M = \text{sup} A$ ( with $M=\infty$ if $A$ is upward bounded). \\
+
+Pick a sequence $\{x_n\}$ from $[a,b)$ such that $f(x_n)\to M$.\\
+
+By Bolzano-Weierstrass Theorem, $\{x_n\}$ has a convergent subsuequence $\{x_{n_k}\}$, i.e. $C = \text{lim } x_{u_k}$.\\
+
+Since $[a,b]$ is closed $c\in [a,b]$. Since $f$ is continous $x_{u_k}\to C$ implies $f(x_{u_k})\to f(c)$.\\
+
+ But we also $f(x_{u_k}) \to M$.\\
+
+\begin{align*}
+	f(x_n) \to M
+\end{align*}
+
+
+
+
+
+
+
+
+
 
 
 
