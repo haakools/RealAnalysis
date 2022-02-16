@@ -4,7 +4,10 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{amsthm}
+\usepackage{amssymb}
 \usepackage{ulem}
+\usepackage{tikz}
+\newcommand\mybox[2][]{\tikz[overlay]\node[fill=yellow!20,draw=black,inner sep=2pt, anchor=text, rectangle, rounded corners=1mm,#1] {#2};\phantom{#2}}
 
 
 \title{Mandatory Assignment 1 of 2}
@@ -25,24 +28,31 @@
  \noindent \\
  a) Use the definiton of convergence to show that if $\{x_n\}\in X$, then there is a $K\in \mathbb{N}$ such that $|x_K|=\text{sup}\{|x_n| : n\in \mathbb{N} \}$ (i.e. $x_K$ is an element of maximal absolute value).\\
  
+\noindent\fbox{
+    \parbox{\textwidth}{
  \noindent \\
  As all sequences $\{x_n\}_{n\in \mathbb{N}}$ in $X$ converges to $0$, $lim_{n\to \infty} x_n = 0$, we have that for every $\epsilon>0$ there exists a $N\in \mathbb{N}$ such that $|\{x_n\}-0| = |\{x_n\}|<\epsilon$. \\
+ 
+  \noindent
+ \textbf{Definition of convergence:}\\
+ ''A sequence $\{x_n\}$ of real numbers converges to $a\in\mathbb{R}$ if for every $\epsilon >0$ (no matter how small), there is an $N\in\mathbb{N}$ such that $|x_n-a|<"\epsilon$ for all $n\le N$. We write $lim_{n \to \infty} x_n = a$.''\\
  
  
  \begin{align*}
  	|x_K| = \text{sup} \{|x_n| \ : | n\in\mathbb{N}   \}
  \end{align*}
  
+    }
+}
+
+
  
 %All sequences in $X$ are real numbers and converges to $0$ and are therefore Cauchy sequences (Theorem 2.2.5 in \cite{lindstrom2017}, ''Completenes of $\mathbb{R}^m$ '' and Propostiion 2.2.6), and every Cauchy sequence in $\mathbb{R}$ is bounded. 
  
  
- \noindent
- \textbf{Definition of convergence:}\\
- ''A sequence $\{x_n\}$ of real numbers converges to $a\in\mathbb{R}$ if for every $\epsilon >0$ (no matter how small), there is an $N\in\mathbb{N}$ such that $|x_n-a|<"\epsilon$ for all $n\le N$. We write $lim_{n \to \infty} x_n = a$.''\\
- 
 
- 
+
+\newpage
  \noindent \\
  b) Define $d: X \times X \to [0, \infty)$ by
 \begin{align*}
@@ -50,6 +60,12 @@
 \end{align*}
  Show that d is a metric on $X$.\\
  \noindent \\
+
+
+\noindent\fbox{
+    \parbox{\textwidth}{
+
+
 For $(X,d)$ to be a metric, it ness to satisfy the properties of postivity, symmetry and the triangle inequality:
  \begin{itemize}
  	\item (Positivity) For all $x,y\in X$, we have $d(x,y)\ge 0$ with equalitiy if and only if $x=y$.
@@ -76,22 +92,63 @@ This results in $d(\{x_n\}, \{z_n\}) + d(\{z_n\}, \{y_n\})$ being an upper bound
  \begin{align*}
 	 d(\{x_n\}, \{y_n\}) \le d(\{x_n\}, \{z_n\}) + d(\{z_n\}, \{y_n\})
 \end{align*}
+    }
+}
 
  \noindent \\
  c)  Let $Y$ be the set of all sequences $ \{y_n\}_{n\in\mathbb{N}}$ of real numbers such that $\sum_{n=1}^{\infty} |y_n| < \infty$. Show that $Y \subseteq X$. Find a sequence $\{x_n\}$ that belongs to $X$ but not to $Y$ (you can use everything you know from calculus).\\
  
+\noindent\fbox{
+    \parbox{\textwidth}{
+
+ 
+ We have 
+ \begin{align*}
+ 	X &= \{ \{x_n\} \ | \ \text{lim}_{n\to\infty} x_n = 0, n\in\mathbb{N}\} \\
+	Y &= \{ \{y_n\} \ | \ \sum_{n=0}^{\infty}|y_n|<\infty, n\in\mathbb{N}\} 
+ \end{align*}
+ 
+ Define $S_N = \sum_{n=0}^N |y_n|$, which converges as it is smaller than infinity. We can then write
+ \begin{align*}
+ 	\text{lim}_{n\to\infty} \left( S_N - S_{N-1}\right) = L-L = 0
+ \end{align*}
+ 
+ but
+ 
+ \begin{align*}
+ 	S_N - S_{N-1} &= \left( |y_0| + |y_1| + \cdot \cdot \cdot |y_N|\right) - \left( |y_0| + |y_1| + \cdot \cdot \cdot |y_{N-1}|\right) \\
+ 	&= |y_n|
+ \end{align*}
+ So we have that $|y_N|=0$ and therefore all sequences in $Y$ converges to $0$ and therefore $Y \subseteq X$.
+ 
+ 
  \noindent
-As $X$ is the set of all sequences of real numbers that converges to $0$ (i.e. $lim_{n\to \infty} x_n = 0$) and $Y$ is the set of all sequences of real numbers such that $\sum_{n=1}^{\infty} |y_n| < \infty$, one functions that that belongs to $X$ but not to $Y$ is the harmonic series
+ A sequence $\{x_n\}$ that belongs to $X$ but not to $Y$ is the harmonic series, $\frac{1}{n}$. This series converges to zero as $\lim_{n \to \infty} 1/n = 0$, but the sum of the absolute value of the sequence is not smaller than infinity.
 \begin{align*}
-	\sum_{n=1}^\infty \frac{1}{n}
+	\sum_{n=1}^\infty \left| \frac{1}{n}\right |  \nless \infty
 \end{align*} 
-This series converges to sero as $\lim_{n \to \infty} 1/n = 0$, but the sum of the function is not smaller than infinity.
+
+    }
+}
+
 
  \noindent \\
 d) Assume $\{x_n\} \in X \backslash Y$ and let $\epsilon > 0$. Show that the ball $B(\{x_n\}; \epsilon)$ contains elements from $Y$. Explain why this shows that  $Y$ is not closed.\\
  
+
+\noindent\fbox{
+    \parbox{\textwidth}{
+
+
  \noindent \\
  If the ball $B(\{x_n\}; \epsilon)$ contains elements, either has an interior- or boundary point in $Y$ then $Y$ is not closed. We can check this by firstly examining if there exists an exterior point of $Y$. \\
+
+
+  
+ 
+ 
+ 
+ 
  \noindent \\
  If $B(\{x_n\}; \epsilon) \subset Y^c$ where $\{x_n\} \in X \backslash Y$.
  
@@ -116,11 +173,19 @@ d) Assume $\{x_n\} \in X \backslash Y$ and let $\epsilon > 0$. Show that the bal
  	\overline{\text{B}}(a;r) = \{x\in X \ : \ d(x,a) \le r   \}
  \end{align*}
  
- 
+   }
+}
+
  
  \noindent \\
 e) Assume $\{y_n\}\in Y$ and let $\epsilon >0$. Show that $B(\{y_n\};\epsilon)$ contains elements from $X \backslash Y$ Explain why this shows that $Y$ is not open. \\
  
+
+\noindent\fbox{
+    \parbox{\textwidth}{
+
+    }
+}
 
 
  
@@ -130,8 +195,12 @@ e) Assume $\{y_n\}\in Y$ and let $\epsilon >0$. Show that $B(\{y_n\};\epsilon)$ 
 A metric space $(X,d)$ is called disconnected if there are two non-empty, open subsets $O_1, O_2$ such that $O_1 \cup O_2 = X$ and $O_1 \cap O_2 = \emptyset$. \\
 %DONE
 \noindent \\
-a) Let $X = [0,1] \cup [2,3]$ have the usual metric $d(x,y) = |x-y|$. \\
+a) Let $X = [0,1] \cup [2,3]$ have the usual metric $d(x,y) = |x-y|$. Show that $(X,d)$ is disconnected. \\
 \noindent \\
+
+
+\noindent\fbox{
+    \parbox{\textwidth}{
 The metric space $(X,d)$ is composed of two closed sets. \\
 By carefully splitting $X$ into $O_1= [0,\frac{1}{2}) \cup (\frac{3}{2},3]$ and $O_2 = (\frac{1}{2},1]\cup [2,\frac{3}{2})$, the ''inside'' and the ''outside'' of $X$, we now have two non-empty, open subsets which satisfy the properties of a disconnected metric space.
 \begin{align*}
@@ -139,11 +208,18 @@ By carefully splitting $X$ into $O_1= [0,\frac{1}{2}) \cup (\frac{3}{2},3]$ and 
 	O_1 \cap O_2  &= \left( [0,\frac{1}{2}) \cup (\frac{3}{2},3]\right) \cap \left( (\frac{1}{2},1]\cup [2,\frac{3}{2})\right)  = \emptyset
 \end{align*}
 
+    }
+}
+
+
 
 
 \noindent \\
 b) Show that $\mathbb{Q}$ with the usual metric $d(x,y)=|x-y|$ is disconnected. \\
 (Hint: Consider $O_1=\{x\in\mathbb{Q} : x^2 > 2\}$ and $O_2=\{x\in\mathbb{Q} : x^2 > 2\}$.)\\
+
+\noindent\fbox{
+    \parbox{\textwidth}{
 
 \noindent \\
 Considering $O_1=\{x\in\mathbb{Q} : x^2 > 2\}$ and $O_2=\{x\in\mathbb{Q} : x^2 < 2\}$, which are open, non-empty subsets of $\mathbb{Q}$. The metric space is disconnected as the subset are disjointed
@@ -152,12 +228,29 @@ Considering $O_1=\{x\in\mathbb{Q} : x^2 > 2\}$ and $O_2=\{x\in\mathbb{Q} : x^2 <
 	O_1 \cup O_2 = \{x\in\mathbb{Q} : x^2 > 2\}\cap\{x\in\mathbb{Q} : x^2 < 2\} = \mathbb{Q} \\
 	O_1 \cap O_2 = \{x\in\mathbb{Q} : x^2 > 2\}\cup\{x\in\mathbb{Q} : x^2 < 2\} = \emptyset \\
 \end{align*}
+    }
+}
+
 
 
 
 \noindent \\
 c) Assume that $(X,d)$ is a connected (i.e. not disconnected) metric space and that $f : X \to \mathbb{R}$ is a continous function such that there are two points $a,b \in X$ with $f(a)<0<f(b)$. Show that there is a point $c\in X$ such that $f(c)=0$.(This is an abstract version of the Intermediate Value Theorem.)
+\noindent\fbox{
+    \parbox{\textwidth}{
+	The outline of the proof should look like this:
+	\begin{itemize}
+		\item Since $(X,d)$ is connected and $f$ is continous, $f(X)$ is connected.
+		\item Since $f$ is a function from $X$ to $\mathbb{R}$, $f(X)\subseteq \mathbb{R}$
+		\item Since $f(a)$ and $f(b)$ are in $f(X)$, $f(X)$ is nonempty
+		\item Since all nonempty, connected subsets of $\mathbb{R}$ are intervals, $f(X)$ is an interval
+		\item Intervals are characterized by the property that any point lying between two points of an interval is also in the interval.
+		\item Therefore, since $f(a) < 0 < f(b)$ and  $f(a)$ and $f(b)$ are points of the interval $f(X)$, we conclude that $0\in f(X)$. 
+		\item I.e.: there is a point $c\in X$ such that $f(c)=0$.
+	\end{itemize}
 
+    }
+}
 
 
 
