@@ -160,34 +160,54 @@ d) Assume $\{x_n\} \in X \backslash Y$ and let $\epsilon > 0$. Show that the bal
 
 Assuming $\{x_n\} \in X \backslash Y$ means we are looking at the sets $\{x_n\}$ which have the following properties
 \begin{align*}
-	\lim_{x\to\infty} \{x_n\} = 0 \quad \text{and} \quad sum_{n=1}^\infty |x_n| &= \infty
+	\lim_{x\to\infty} \{x_n\} = 0 \quad \text{and} \quad \sum_{n=1}^\infty |x_n| &= \infty
 \end{align*}
 
+We need to prove that the ball 
 \begin{align*}
-	B(\{x_n\}; \epsilon) &= \{\{z_n\} \in X \backslash Y : \ d( \{z_n\}, \{x_n\})< \epsilon \} \\
-	& = |z_n -x_n| < \epsilon
+	B(\{x_n\}; \epsilon) = \{\{z_n\} \in X \backslash Y : \ d( \{z_n\}, \{x_n\})< \epsilon \}
 \end{align*}
-
-So we need to prove that the ball $B(\{x_n\}; \epsilon)$ contains elements from $Y$, we need to show that there exists a $\{z_n\}$ such that $\sum_{i=1}^\infty |z_n| <0$. We know that $\sum_{i=0}^\infty |x_n| = \infty$.\\
-
+contains elements from $Y$: i.e. show that there exists a $\{z_n\}$ such that
 \begin{align*}
-	|z_n| - |x_n| &\le |z_n -x_n| <\epsilon \\
-	|x_n| - |z_n| &\le |z_n -x_n| <\epsilon \\
+	|z_n -x_n| < \epsilon
 \end{align*}
-
-Tom: "What can you do to $\{x_n\}$ to make it converge without messing with the sequence \emph{too} much. "
-
-\noindent
-Erik: "A sum $\sum_{n=1}^\infty |x_n|$ converges if and only if $\sum_{n=N}^\infty |x_n|$ converges for each $N\in\mathbb{N}$. So summing up the "tail" of the sequence, starting from $N$, is the problem. We can get the tail $\{x_n\}$ as close to zero as we wish as $\lim_{n\to\infty} x_n = 0$. \\
-\noindent 
-Try to look at sequences where the tail is then removed, i.e.
+for  $\sum_{n=1}^\infty |z_n| <0$.
+We know that $\sum_{n=1}^\infty |z_n|$ converges if and only if $\sum_{n=N}^\infty |z_n|$ converges for all $N\in\mathbb{N}$. Considering 
 \begin{align*}
-	\{x_1, x_2, x_3, ..., x_N, 0,0,...,0,...\}
+	\{\widetilde{z_n}\} = \{ z_1, z_2, z_3, ..., z_n, 0, 0, ..., 0, ...\}
 \end{align*}
-  
+which also converges as  $\sum_{n=N}^\infty |z_n|$ converges. Incorporating this we get
+\begin{align*}
+	|\widetilde{z_n}-x_n|\le  |z_n -x_n| <\epsilon \\
+\end{align*}
+Supposing $N$ is where the entries in the sequence $\{\widetilde{z_n}\}$ become zero, choosing an $n>N$ we get
+\begin{align*}
+	|\widetilde{z_n}-x_n| = |0-x_n|&\le  |z_n -x_n| <\epsilon \\
+	|x_n|&< \epsilon
+\end{align*}
+
+Which is true as $lim_{n\to\infty} |x_n| =0$ converges and thus we can always find an $N$ far enough out such that this holds.
+
+Since we have chosen the open ball, this means that $Y$ is not closed as [...].
+
+
+%Tom: "What can you do to $\{x_n\}$ to make it converge without messing with the sequence \emph{too} much. "
+
+%\noindent
+%Erik: "A sum $\sum_{n=1}^\infty |x_n|$ converges if and only if $\sum_{n=N}^\infty |x_n|$ converges for each $N\in\mathbb{N}$. So summing up the "tail" of the sequence, starting from $N$, is the problem. We can get the tail $\{x_n\}$ as close to zero as we wish as $\lim_{n\to\infty} x_n = 0$. \\
+%\noindent 
+%Try to look at sequences where the tail is then removed, i.e.
+%\begin{align*}
+%	\{x_1, x_2, x_3, ..., x_N, 0,0,...,0,...\}
+%\end{align*}
+ 
+
+
+
+
    }
 }
-
+\newpage
  
  \noindent \\
 e) Assume $\{y_n\}\in Y$ and let $\epsilon >0$. Show that $B(\{y_n\};\epsilon)$ contains elements from $X \backslash Y$ Explain why this shows that $Y$ is not open. \\
@@ -195,6 +215,35 @@ e) Assume $\{y_n\}\in Y$ and let $\epsilon >0$. Show that $B(\{y_n\};\epsilon)$ 
 
 \noindent\fbox{
     \parbox{\textwidth}{
+Assuming $\{y_n\} \in Y $ means we are looking at the sets $\{y_n\}$ which have the following properties
+\begin{align*}
+	\lim_{x\to\infty} \{y_n\} = 0 \quad \text{and} \quad \sum_{n=1}^\infty |y_n| &< \infty
+\end{align*}
+
+We need to prove that the ball 
+\begin{align*}
+	B(\{y_n\}; \epsilon) = \{\{z_n\} \in Y : \ d( \{z_n\}, \{y_n\})< \epsilon \}
+\end{align*}
+contains elements from $X\backslash Y$: i.e. show that there exists a $\{z_n\}$ such that
+\begin{align*}
+	|z_n -y_n| < \epsilon
+\end{align*}
+for $\sum_{n=1}|y_n|<\infty$ and $\sum_{n=1}|z_n| = \infty$.
+
+Following from the previous argument, consider a 
+\begin{align*}
+	\{\widetilde{y_n}\} = \{y_1, y_2, y_3, ..., y_n, 0, 0, ..., 0, ...\}
+\end{align*}
+which also converges as $\sum_{n=N} |y_n|$ convergers. By using the fact that $|z_n-y_n| = |y_n-z_n|$ we get 
+\begin{align*}
+	|y_n-z_n|  &< \epsilon\\
+	|\widetilde{y_n} -z_n| = |0-z_n| &\le |y_n-z_n| < \epsilon\\
+	|z_n| &< \epsilon
+\end{align*}
+Which is true as $lim_{n\to\infty} |z_n| =0$ converges and thus we can always find an $N$ far enough out such that this holds.
+
+
+Since we have chosen the open ball, this means that $Y$ is not open as [...].
 
     }
 }

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.26)  21 FEB 2022 17:21
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.26)  21 FEB 2022 18:12
 entering extended mode
 **./mat2400oblig1v22_solution.tex
 (mat2400oblig1v22_solution.tex
@@ -609,64 +609,64 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--156
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 189--189
-
- []
-
-
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 158--190
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 158--210
 [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 192--194
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--212
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--212
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 207--212
-
  []
 
 [5]
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 214--225
-[] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 229--232
+Underfull \hbox (badness 10000) in paragraph at lines 212--214
 
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 233--245
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 216--250
 [] 
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 255--353
-[] 
+Underfull \hbox (badness 10000) in paragraph at lines 256--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--261
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 256--261
+
  []
 
 [6]
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 263--274
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 278--281
+
+ []
+
+
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 282--294
+[] 
+ []
+
+
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 304--402
+[] 
+ []
+
+[7]
 Overfull \vbox (1.427pt too high) has occurred while \output is active []
 
- [7]
+ [8]
 (mat2400oblig1v22_solution.aux) ) 
 Here is how much of TeX's memory you used:
  23356 strings out of 478870
  605717 string characters out of 2858693
- 1040881 words of memory out of 3000000
+ 1039881 words of memory out of 3000000
  40915 multiletter control sequences out of 15000+600000
  413274 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -685,9 +685,9 @@ m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
 eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type
 1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
 onts/symbols/msbm10.pfb>
-Output written on mat2400oblig1v22_solution.pdf (7 pages, 180296 bytes).
+Output written on mat2400oblig1v22_solution.pdf (8 pages, 182003 bytes).
 PDF statistics:
- 104 PDF objects out of 1000 (max. 8388607)
+ 107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
