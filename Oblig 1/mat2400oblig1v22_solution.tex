@@ -7,7 +7,14 @@
 \usepackage{amssymb}
 \usepackage{ulem}
 \usepackage{tikz}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.8}
+
+
 \newcommand\mybox[2][]{\tikz[overlay]\node[fill=yellow!20,draw=black,inner sep=2pt, anchor=text, rectangle, rounded corners=1mm,#1] {#2};\phantom{#2}}
+\usepackage{graphicx}
+
+\newcommand{\Lim}[1]{\raisebox{0.5ex}{\scalebox{0.8}{$\displaystyle \lim_{#1}\;$}}}
 
 
 \title{Mandatory Assignment 1 of 2}
@@ -31,16 +38,28 @@
 \noindent\fbox{
     \parbox{\textwidth}{
  \noindent \\
- As all sequences $\{x_n\}_{n\in \mathbb{N}}$ in $X$ converges to $0$, $lim_{n\to \infty} x_n = 0$, we have that for every $\epsilon>0$ there exists a $N\in \mathbb{N}$ such that $|\{x_n\}-0| = |\{x_n\}|<\epsilon$. \\
+ As all sequences $\{x_n\}_{n\in \mathbb{N}}$ in $X$ converges to $0$, $lim_{n\to \infty} x_n = 0$, the defintion of convergence states:
+
+For every $\epsilon>0$ there exists a $N\in \mathbb{N}$ such that 
+\begin{align*}
+	|\{x_n\}-0| = |\{x_n\}|<\epsilon
+ \end{align*}
+%  \noindent
+% \textbf{Definition of convergence:}\\
+ %''A sequence $\{x_n\}$ of real numbers converges to $a\in\mathbb{R}$ if for every $\epsilon >0$ (no matter how small), there is an $N\in\mathbb{N}$ such that $|x_n-a|<"\epsilon$ for all $n\le N$. We write $lim_{n \to \infty} x_n = a$.''\\
  
-  \noindent
- \textbf{Definition of convergence:}\\
- ''A sequence $\{x_n\}$ of real numbers converges to $a\in\mathbb{R}$ if for every $\epsilon >0$ (no matter how small), there is an $N\in\mathbb{N}$ such that $|x_n-a|<"\epsilon$ for all $n\le N$. We write $lim_{n \to \infty} x_n = a$.''\\
- 
- 
+%Pointers from lecturer:\\
+% Think of a sequence as a point in a space, i.e. $\{x_n\}$ is a point in the space of $X$. \\
+
+\noindent 
+
+As the series converges, one can choose an $\epsilon>0$ such that there exists an $N\in\mathbb{N}$ where $|\{x_n\}|$ is no longer increasing. Therefore there must exists a $K\in\mathbb{N}$ such that $K\le N$ where 
  \begin{align*}
  	|x_K| = \text{sup} \{|x_n| \ : | n\in\mathbb{N}   \}
  \end{align*}
+ 
+
+\textbf{Note:} This is a very wordy argument and I am not quite sure how to phrase it more rigorously.
  
     }
 }
@@ -66,7 +85,7 @@
     \parbox{\textwidth}{
 
 
-For $(X,d)$ to be a metric, it ness to satisfy the properties of postivity, symmetry and the triangle inequality:
+For $(X,d)$ to be a metric space, it needs to satisfy the properties of postivity, symmetry and the triangle inequality:
  \begin{itemize}
  	\item (Positivity) For all $x,y\in X$, we have $d(x,y)\ge 0$ with equalitiy if and only if $x=y$.
  	\item (Symmetry) For all $x,y \in X$ we have $d(x,y)=d(y,x)$. 
@@ -130,7 +149,7 @@ This results in $d(\{x_n\}, \{z_n\}) + d(\{z_n\}, \{y_n\})$ being an upper bound
 
     }
 }
-
+\newpage
 
  \noindent \\
 d) Assume $\{x_n\} \in X \backslash Y$ and let $\epsilon > 0$. Show that the ball $B(\{x_n\}; \epsilon)$ contains elements from $Y$. Explain why this shows that  $Y$ is not closed.\\
@@ -139,40 +158,33 @@ d) Assume $\{x_n\} \in X \backslash Y$ and let $\epsilon > 0$. Show that the bal
 \noindent\fbox{
     \parbox{\textwidth}{
 
+Assuming $\{x_n\} \in X \backslash Y$ means we are looking at the sets $\{x_n\}$ which have the following properties
+\begin{align*}
+	\lim_{x\to\infty} \{x_n\} = 0 \quad \text{and} \quad sum_{n=1}^\infty |x_n| &= \infty
+\end{align*}
 
- \noindent \\
- If the ball $B(\{x_n\}; \epsilon)$ contains elements, either has an interior- or boundary point in $Y$ then $Y$ is not closed. We can check this by firstly examining if there exists an exterior point of $Y$. \\
+\begin{align*}
+	B(\{x_n\}; \epsilon) &= \{\{z_n\} \in X \backslash Y : \ d( \{z_n\}, \{x_n\})< \epsilon \} \\
+	& = |z_n -x_n| < \epsilon
+\end{align*}
 
+So we need to prove that the ball $B(\{x_n\}; \epsilon)$ contains elements from $Y$, we need to show that there exists a $\{z_n\}$ such that $\sum_{i=1}^\infty |z_n| <0$. We know that $\sum_{i=0}^\infty |x_n| = \infty$.\\
 
+\begin{align*}
+	|z_n| - |x_n| &\le |z_n -x_n| <\epsilon \\
+	|x_n| - |z_n| &\le |z_n -x_n| <\epsilon \\
+\end{align*}
+
+Tom: "What can you do to $\{x_n\}$ to make it converge without messing with the sequence \emph{too} much. "
+
+\noindent
+Erik: "A sum $\sum_{n=1}^\infty |x_n|$ converges if and only if $\sum_{n=N}^\infty |x_n|$ converges for each $N\in\mathbb{N}$. So summing up the "tail" of the sequence, starting from $N$, is the problem. We can get the tail $\{x_n\}$ as close to zero as we wish as $\lim_{n\to\infty} x_n = 0$. \\
+\noindent 
+Try to look at sequences where the tail is then removed, i.e.
+\begin{align*}
+	\{x_1, x_2, x_3, ..., x_N, 0,0,...,0,...\}
+\end{align*}
   
- 
- 
- 
- 
- \noindent \\
- If $B(\{x_n\}; \epsilon) \subset Y^c$ where $\{x_n\} \in X \backslash Y$.
- 
-\begin{itemize}
- 	\item an interior point of $Y$ is there if $r>0$ such that $B(\{x_n\}; \epsilon) \subset Y$
-	\item an exterior point of $Y$ is there if $r>0$ such that $B(\{x_n\}; \epsilon) \subset Y^c$
-	\item a boundary point if of $A$ is there if all $r>0$ we have 
-	\begin{align*}
-		B(\{x_n\}, \epsilon) \cap A \neq \emptyset \quad and B(\{x_n\}, \epsilon) \cap A^c \neq \emptyset
-	\end{align*}
-\end{itemize}
- 
- 
- 
- \textbf{\uline{Note:}} The ball is defined as such:\\
- \noindent \\ Let $a$ be a point in a metric space $(X,d)$, and assume that $r$ is a positive, real number. The (open) ball centered at $a$ with radius $r$ is set 
- \begin{align*}
- 	\text{B}(a;r) = \{x\in X \ : \ d(x,a) <r   \}
- \end{align*}
- And the \emph{closed} ball centered at $a$ with radius $r$ is the set
- \begin{align*}
- 	\overline{\text{B}}(a;r) = \{x\in X \ : \ d(x,a) \le r   \}
- \end{align*}
- 
    }
 }
 
@@ -236,18 +248,105 @@ Considering $O_1=\{x\in\mathbb{Q} : x^2 > 2\}$ and $O_2=\{x\in\mathbb{Q} : x^2 <
 
 \noindent \\
 c) Assume that $(X,d)$ is a connected (i.e. not disconnected) metric space and that $f : X \to \mathbb{R}$ is a continous function such that there are two points $a,b \in X$ with $f(a)<0<f(b)$. Show that there is a point $c\in X$ such that $f(c)=0$.(This is an abstract version of the Intermediate Value Theorem.)
+
+
+
+
 \noindent\fbox{
     \parbox{\textwidth}{
-	The outline of the proof should look like this:
-	\begin{itemize}
-		\item Since $(X,d)$ is connected and $f$ is continous, $f(X)$ is connected.
-		\item Since $f$ is a function from $X$ to $\mathbb{R}$, $f(X)\subseteq \mathbb{R}$
-		\item Since $f(a)$ and $f(b)$ are in $f(X)$, $f(X)$ is nonempty
-		\item Since all nonempty, connected subsets of $\mathbb{R}$ are intervals, $f(X)$ is an interval
-		\item Intervals are characterized by the property that any point lying between two points of an interval is also in the interval.
-		\item Therefore, since $f(a) < 0 < f(b)$ and  $f(a)$ and $f(b)$ are points of the interval $f(X)$, we conclude that $0\in f(X)$. 
-		\item I.e.: there is a point $c\in X$ such that $f(c)=0$.
-	\end{itemize}
+	To prove there exists a $c\in \mathbb{X}$ such that $f(c)=0$, we need to prove that given $(X,d)$ is connected we have $f(X)$ to be connected. Because if $f(X)$ is connected, the two sets $(a,c]$ and $[c,b)$ contradicts the defintion of disconnected sets
+\begin{align*}
+	O_1 \cap O_2 = (a,c] \cap [c,b) \neq \emptyset
+\end{align*}
+which means there must be a $c\in X$ such that $f(c)=0$. Under is the proof that given $(X,d)$ is connected and $f(X)$ is continous, then $f(X)$ is connected:\\
+\textbf{Proof by the contrapositive}: \\
+	Suppose $f:X\to F(X)$ is a surjective (?), continous function and that $f(X)$ is disconnected. Since $f(X)$ is disconnected, ther must be two open subsets $U_1$ and $U_2$ in $f(X)$ such that 
+\begin{align*}
+	U_1 \cup U_2&= f(X)\\
+	U_1 \cap U_2&= \emptyset
+\end{align*}
+Let $O_1 = f^{-1}(U_1)$ and $O_2 = f^{-1}(U_2)$, and as $U_1, U_2$ are open sets so are $O_1, O_2$. 
+For every $x\in X$, the union of the two subsets are
+\begin{align*}
+	O_1 \cup O_2 = X
+\end{align*}
+Therefore $f(x)$ is either in $U_1$ or $U_2$. Since $O_1, O_2$ are disjoint, because $x\in O_1 \cap O_2$ then $f(x)$ would be in both $U_1$ \emph{and} $U_2$. Thus, $f(X)$ is disconnected.
+
+% Tikz figure
+\begin{center}
+\begin{tikzpicture}
+	\centering
+	\begin{axis}[
+	axis x line = middle,
+	axis y line = middle,
+	every axis x label/.style={at={(current axis.right of origin)},anchor=north},
+      every axis y label/.style={at={(current axis.above origin)},anchor=east},
+	ymin = -3,
+	xmin = -0.25,
+	ymax = 8.2,
+	xmax = 2.5,
+	xlabel=$X$,
+	ylabel=$f(X)$, 
+	yticklabels={,,},
+	xticklabels={,,},
+	enlargelimits=false,
+	title={Sketch of continous $f(X)$ when $(X,d)$ is disconnected.},
+	]	
+	\addplot[black, domain=0.5:1]
+		{x^3+20*sin(x)-2};	
+	\addplot[black, domain=1.5:2]
+		{x^3+20*sin(x)-2};
+
+ 	%Horizontal lines	
+	\addplot[dashed, mark=*, mark options={scale=0.5}] coordinates {(0.5,	-1.70047) (0, -1.70047)};	
+	\addplot[dashed, mark=*, mark options={scale=0.5}] coordinates {(1,		-0.65095) (0,-0.65095)};	
+	\addplot[dashed, mark=*, mark options={scale=0.5}] coordinates {(1.5,	1.898539) (0,1.898539 	)};	
+	\addplot[dashed, mark=*, mark options={scale=0.5}] coordinates {(2.0,	6.69799) (0,6.69799		)};	
+
+	% Vertical lines	
+	\addplot[dashed, mark=*, mark options={scale=0.5}] coordinates {(0.5,	-1.70047) (0.5, 0)};	
+	\addplot[dashed, mark=*, mark options={scale=0.5}] coordinates {(1,		-0.65095) (1,0)};	
+	\addplot[dashed, mark=*, mark options={scale=0.5}] coordinates {(1.5,	1.898539) (1.5,0)};	
+	\addplot[dashed, mark=*, mark options={scale=0.5}] coordinates {(2.0,	6.69799) (2.0,0)};	
+	% Set partitions of X and f(X)
+%O1
+\draw [thick,decoration={brace,raise=2pt},decorate] 
+  (axis cs:0.5,0) --
+    node[above=5pt] {\footnotesize{$O_1 = f^{-1}(U_1)$}} 
+  (axis cs:1, 0);
+
+%O2
+\draw [thick,decoration={brace,raise=2pt},decorate] 
+  (axis cs:1.5,	0) --
+    node[above=5pt] {\footnotesize{$O_2 = f^{-1}(U_2)$}} 
+  (axis cs:2,0);
+
+
+%U1
+\draw [thick,decoration={brace,raise=2pt},decorate] 
+  (axis cs:0,	-1.70047) --
+    node[left=2pt] {\footnotesize{$U_1$}}
+  (axis cs:0,-0.65095);
+% U2
+\draw [thick,decoration={brace,raise=2pt},decorate] 
+  (axis cs:0,1.898539) --
+    node[left=2pt] {\footnotesize{$U_2$}} 
+  (axis cs:0,6.69799);
+
+
+\end{axis}
+\end{tikzpicture}
+\end{center}	
+%	The outline of the proof should look like this:
+%	\begin{itemize}
+%		\item Since $(X,d)$ is connected and $f$ is continous, $f(X)$ is connected.
+%		\item Since $f$ is a function from $X$ to $\mathbb{R}$, $f(X)\subseteq \mathbb{R}$
+%		\item Since $f(a)$ and $f(b)$ are in $f(X)$, $f(X)$ is nonempty
+%		\item Since all nonempty, connected subsets of $\mathbb{R}$ are intervals, $f(X)$ is an interval
+%		\item Intervals are characterized by the property that any point lying between two points of an interval is also in the interval.
+%		\item Therefore, since $f(a) < 0 < f(b)$ and  $f(a)$ and $f(b)$ are points of the interval $f(X)$, we conclude that $0\in f(X)$. 
+%		\item I.e.: there is a point $c\in X$ such that $f(c)=0$.
+%	\end{itemize}
 
     }
 }
