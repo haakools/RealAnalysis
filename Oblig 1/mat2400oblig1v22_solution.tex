@@ -19,7 +19,7 @@
 
 \title{Mandatory Assignment 1 of 2}
 \author{Håkon Berggren Olsen\\
-  \small{MAT2400- Real Analisys}\\
+  \small{MAT2400- Real Analysis}\\
   \small{University of Oslo}\\
   \small{hakonberggren@gmail.com}
 }
@@ -31,7 +31,7 @@
  
 \section*{Problem 1}
  
- Let $X$ be the set of all sequences $\{x_n\}_{n\in \mathbb{N}}$ of real numbers such that $lim_{n\to \infty} x_n = 0$.\\
+ Let $X$ be the set of all sequences $\{x_n\}_{n\in \mathbb{N}}$ of real numbers such that $\lim_{n\to \infty} x_n = 0$.\\
  \noindent \\
  a) Use the definiton of convergence to show that if $\{x_n\}\in X$, then there is a $K\in \mathbb{N}$ such that $|x_K|=\text{sup}\{|x_n| : n\in \mathbb{N} \}$ (i.e. $x_K$ is an element of maximal absolute value).\\
  
@@ -42,7 +42,7 @@
 
 For every $\epsilon>0$ there exists a $N\in \mathbb{N}$ such that 
 \begin{align*}
-	|\{x_n\}-0| = |\{x_n\}|<\epsilon
+	|x_n-0| = |x_n|<\epsilon
  \end{align*}
 %  \noindent
 % \textbf{Definition of convergence:}\\
@@ -53,7 +53,7 @@ For every $\epsilon>0$ there exists a $N\in \mathbb{N}$ such that
 
 \noindent 
 
-As the series converges, one can choose an $\epsilon>0$ such that there exists an $N\in\mathbb{N}$ where $|\{x_n\}|$ is no longer increasing. Therefore there must exists a $K\in\mathbb{N}$ such that $K\le N$ where 
+As the series converges, one can choose an $\epsilon>0$ such that there exists an $N\in\mathbb{N}$ where $|x_n|$ is no longer increasing. Therefore there must exists a $K\in\mathbb{N}$ such that $K\le N$ where 
  \begin{align*}
  	|x_K| = \text{sup} \{|x_n| \ : | n\in\mathbb{N}   \}
  \end{align*}
@@ -123,7 +123,7 @@ This results in $d(\{x_n\}, \{z_n\}) + d(\{z_n\}, \{y_n\})$ being an upper bound
  
  We have 
  \begin{align*}
- 	X &= \{ \{x_n\} \ | \ \text{lim}_{n\to\infty} x_n = 0, n\in\mathbb{N}\} \\
+ 	X &= \{ \{x_n\} \ | \ \lim_{n\to\infty} x_n = 0, n\in\mathbb{N}\} \\
 	Y &= \{ \{y_n\} \ | \ \sum_{n=0}^{\infty}|y_n|<\infty, n\in\mathbb{N}\} 
  \end{align*}
  
@@ -235,8 +235,13 @@ Following from the previous argument, consider a
 	\{\widetilde{y_n}\} = \{y_1, y_2, y_3, ..., y_n, 0, 0, ..., 0, ...\}
 \end{align*}
 which also converges as $\sum_{n=N} |y_n|$ convergers. By using the fact that $|z_n-y_n| = |y_n-z_n|$ we get 
+
 \begin{align*}
-	|y_n-z_n|  &< \epsilon\\
+	|y_n-z_n|  < \epsilon
+\end{align*}
+Supposing $N$ is where the entries in the sequence $\{\widetilde{y_n}\}$ become zero, choosing an $n>N$ we get
+
+\begin{align*}
 	|\widetilde{y_n} -z_n| = |0-z_n| &\le |y_n-z_n| < \epsilon\\
 	|z_n| &< \epsilon
 \end{align*}
@@ -247,7 +252,7 @@ Since we have chosen the open ball, this means that $Y$ is not open as [...].
 
     }
 }
-
+\newpage
 
  
  
@@ -309,7 +314,7 @@ c) Assume that $(X,d)$ is a connected (i.e. not disconnected) metric space and t
 \end{align*}
 which means there must be a $c\in X$ such that $f(c)=0$. Under is the proof that given $(X,d)$ is connected and $f(X)$ is continous, then $f(X)$ is connected:\\
 \textbf{Proof by the contrapositive}: \\
-	Suppose $f:X\to F(X)$ is a surjective (?), continous function and that $f(X)$ is disconnected. Since $f(X)$ is disconnected, ther must be two open subsets $U_1$ and $U_2$ in $f(X)$ such that 
+	Suppose $f:X\to F(X)$ is a surjective (?), continous function and that $f(X)$ is disconnected. Since $f(X)$ is disconnected, there must be two open subsets $U_1$ and $U_2$ in $f(X)$ such that 
 \begin{align*}
 	U_1 \cup U_2&= f(X)\\
 	U_1 \cap U_2&= \emptyset
@@ -319,7 +324,11 @@ For every $x\in X$, the union of the two subsets are
 \begin{align*}
 	O_1 \cup O_2 = X
 \end{align*}
-Therefore $f(x)$ is either in $U_1$ or $U_2$. Since $O_1, O_2$ are disjoint, because $x\in O_1 \cap O_2$ then $f(x)$ would be in both $U_1$ \emph{and} $U_2$. Thus, $f(X)$ is disconnected.
+because $f(x)$ is either in $U_1$ or $U_2$. Since $f(x)$ cannot be in both $U_1$ and $U_2$ since they are disconnected, we have that 
+\begin{align*}
+	O_1 \cap O_2 = \emptyset
+\end{align*}
+Thus $f(X)$ is disconnected.
 
 % Tikz figure
 \begin{center}

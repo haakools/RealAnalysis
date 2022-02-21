@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.26)  21 FEB 2022 18:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.26)  21 FEB 2022 18:51
 entering extended mode
 **./mat2400oblig1v22_solution.tex
 (mat2400oblig1v22_solution.tex
@@ -557,10 +557,10 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) [1
 
 {C:/Users/hakon/AppData/Local/MiKTeX/pdftex/config/pdftex.map}]
-Overfull \hbox (11.43594pt too wide) in paragraph at lines 34--37
+Overfull \hbox (11.70525pt too wide) in paragraph at lines 34--37
 \OT1/cmr/m/n/12 Let $\OML/cmm/m/it/12 X$ \OT1/cmr/m/n/12 be the set of all se-q
 uences $\OMS/cmsy/m/n/12 f\OML/cmm/m/it/12 x[]\OMS/cmsy/m/n/12 g[]$ \OT1/cmr/m/
-n/12 of real num-bers such that $\OML/cmm/m/it/12 lim[]x[] \OT1/cmr/m/n/12 =
+n/12 of real num-bers such that $[][] \OML/cmm/m/it/12 x[] \OT1/cmr/m/n/12 =
  []
 
 
@@ -619,73 +619,73 @@ Underfull \hbox (badness 10000) in paragraph at lines 212--214
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 216--250
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 216--255
 [] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--261
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--261
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 256--261
-
  []
 
 [6]
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 263--274
+Underfull \hbox (badness 10000) in paragraph at lines 261--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--266
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 261--266
+
+ []
+
+
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 268--279
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 278--281
+Underfull \hbox (badness 10000) in paragraph at lines 283--286
 
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 282--294
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 287--299
 [] 
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 304--402
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 309--411
 [] 
  []
 
 [7]
-Overfull \vbox (1.427pt too high) has occurred while \output is active []
+Overfull \vbox (54.02701pt too high) has occurred while \output is active []
 
- [8]
-(mat2400oblig1v22_solution.aux) ) 
+
+[8] (mat2400oblig1v22_solution.aux) ) 
 Here is how much of TeX's memory you used:
  23356 strings out of 478870
  605717 string characters out of 2858693
- 1039881 words of memory out of 3000000
+ 1040881 words of memory out of 3000000
  40915 multiletter control sequences out of 15000+600000
  413274 words of font info for 66 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,13n,108p,748b,2053s stack positions out of 5000i,500n,10000p,200000b,80000s
- <C:\Users\hakon\AppData\Local\MiKTeX\fonts/pk
-/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts
-/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.p
-fb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Progr
-am Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.
-pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Progra
-m Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKT
-eX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
-onts/symbols/msbm10.pfb>
-Output written on mat2400oblig1v22_solution.pdf (8 pages, 182003 bytes).
+ <C:\Users\hakon\AppData\Local\MiKTeX\font
+s/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Program Files/MiKTeX/fonts/type1
+/public/amsfonts/cm/cmbx12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsf
+onts/cm/cmex10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/P
+rogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr7.pfb><C:/Program Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8.pfb><C:/Pr
+ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
+MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/
+type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
+amsfonts/symbols/msbm10.pfb>
+Output written on mat2400oblig1v22_solution.pdf (8 pages, 182032 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
