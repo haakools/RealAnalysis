@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.26)  21 FEB 2022 18:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.23 (MiKTeX 21.7) (preloaded format=pdflatex 2021.7.26)  23 FEB 2022 13:36
 entering extended mode
 **./mat2400oblig1v22_solution.tex
 (mat2400oblig1v22_solution.tex
@@ -609,52 +609,57 @@ Underfull \hbox (badness 10000) in paragraph at lines 154--156
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 158--210
+Underfull \hbox (badness 10000) in paragraph at lines 210--210
+
+ []
+
+
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 158--211
 [] 
  []
 
 [5]
-Underfull \hbox (badness 10000) in paragraph at lines 212--214
+Underfull \hbox (badness 10000) in paragraph at lines 213--215
 
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 216--255
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 217--253
 [] 
  []
 
 [6]
-Underfull \hbox (badness 10000) in paragraph at lines 261--266
+Underfull \hbox (badness 10000) in paragraph at lines 259--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--266
+Underfull \hbox (badness 10000) in paragraph at lines 259--264
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 261--266
+Underfull \hbox (badness 10000) in paragraph at lines 259--264
 
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 268--279
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 266--277
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 283--286
+Underfull \hbox (badness 10000) in paragraph at lines 281--284
 
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 287--299
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 285--297
 [] 
  []
 
 
-Overfull \hbox (14.63324pt too wide) in paragraph at lines 309--411
+Overfull \hbox (14.63324pt too wide) in paragraph at lines 307--409
 [] 
  []
 
@@ -685,7 +690,7 @@ ogram Files/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/
 MiKTeX/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/Program Files/MiKTeX/fonts/
 type1/public/amsfonts/cm/cmsy8.pfb><C:/Program Files/MiKTeX/fonts/type1/public/
 amsfonts/symbols/msbm10.pfb>
-Output written on mat2400oblig1v22_solution.pdf (8 pages, 182032 bytes).
+Output written on mat2400oblig1v22_solution.pdf (8 pages, 182628 bytes).
 PDF statistics:
  107 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

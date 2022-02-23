@@ -167,12 +167,11 @@ We need to prove that the ball
 \begin{align*}
 	B(\{x_n\}; \epsilon) = \{\{z_n\} \in X \backslash Y : \ d( \{z_n\}, \{x_n\})< \epsilon \}
 \end{align*}
-contains elements from $Y$: i.e. show that there exists a $\{z_n\}$ such that
-\begin{align*}
-	|z_n -x_n| < \epsilon
-\end{align*}
-for  $\sum_{n=1}^\infty |z_n| <0$.
-We know that $\sum_{n=1}^\infty |z_n|$ converges if and only if $\sum_{n=N}^\infty |z_n|$ converges for all $N\in\mathbb{N}$. Considering 
+contains elements from $Y$: i.e. show that there exists a $\{z_n\}$ such that $|z_n -x_n| < \epsilon$ for 
+$\sum_{n=1}^\infty |z_n| <0$. We know that $\sum_{n=1}^\infty |z_n|$ converges if and only if 
+$\sum_{n=N}^\infty |z_n|$ converges for all $N\in\mathbb{N}$. 
+
+Considering 
 \begin{align*}
 	\{\widetilde{z_n}\} = \{ z_1, z_2, z_3, ..., z_n, 0, 0, ..., 0, ...\}
 \end{align*}
@@ -180,15 +179,17 @@ which also converges as  $\sum_{n=N}^\infty |z_n|$ converges. Incorporating this
 \begin{align*}
 	|\widetilde{z_n}-x_n|\le  |z_n -x_n| <\epsilon \\
 \end{align*}
+
+
 Supposing $N$ is where the entries in the sequence $\{\widetilde{z_n}\}$ become zero, choosing an $n>N$ we get
 \begin{align*}
 	|\widetilde{z_n}-x_n| = |0-x_n|&\le  |z_n -x_n| <\epsilon \\
 	|x_n|&< \epsilon
 \end{align*}
 
-Which is true as $lim_{n\to\infty} |x_n| =0$ converges and thus we can always find an $N$ far enough out such that this holds.
-
-Since we have chosen the open ball, this means that $Y$ is not closed as [...].
+Which is true as $lim_{n\to\infty} |x_n| =0$ converges and thus we can always find an $N$ far enough out such that this holds.\\
+\noindent \\
+We have proved that a ball $B(\{x_n\}, \epsilon)$ centered around $\{x_n\}\in X \backslash Y$ contains atleast some of its boundary points. So since $Y$ (the complement of $X\backslash Y$) does \emph{not} contain \emph{all} of its boundary points, it cannot be closed.
 
 
 %Tom: "What can you do to $\{x_n\}$ to make it converge without messing with the sequence \emph{too} much. "
@@ -224,11 +225,7 @@ We need to prove that the ball
 \begin{align*}
 	B(\{y_n\}; \epsilon) = \{\{z_n\} \in Y : \ d( \{z_n\}, \{y_n\})< \epsilon \}
 \end{align*}
-contains elements from $X\backslash Y$: i.e. show that there exists a $\{z_n\}$ such that
-\begin{align*}
-	|z_n -y_n| < \epsilon
-\end{align*}
-for $\sum_{n=1}|y_n|<\infty$ and $\sum_{n=1}|z_n| = \infty$.
+contains elements from $X\backslash Y$: i.e. show that there exists a $\{z_n\}$ such that $|z_n -y_n| < \epsilon$ for $\sum_{n=1}|y_n|<\infty$ and $\sum_{n=1}|z_n| = \infty$.
 
 Following from the previous argument, consider a 
 \begin{align*}
@@ -248,7 +245,8 @@ Supposing $N$ is where the entries in the sequence $\{\widetilde{y_n}\}$ become 
 Which is true as $lim_{n\to\infty} |z_n| =0$ converges and thus we can always find an $N$ far enough out such that this holds.
 
 
-Since we have chosen the open ball, this means that $Y$ is not open as [...].
+
+We have proved that a ball $B(\{y_n\}, \epsilon)$ centered around $\{y_n\}\in Y$ contains atleast some of its boundary points. So since $Y$ (the complement of $X\backslash Y$) does contain \emph{some} of its boundary points, it cannot be open.
 
     }
 }
@@ -374,9 +372,9 @@ Thus $f(X)$ is disconnected.
   (axis cs:1, 0);
 
 %O2
-\draw [thick,decoration={brace,raise=2pt},decorate] 
+\draw [thick,decoration={brace,mirror,raise=2pt},decorate] 
   (axis cs:1.5,	0) --
-    node[above=5pt] {\footnotesize{$O_2 = f^{-1}(U_2)$}} 
+    node[below=5pt] {\footnotesize{$O_2 = f^{-1}(U_2)$}} 
   (axis cs:2,0);
 
 
