@@ -90,12 +90,12 @@ for all $x\in[-\pi,\pi]$. Use this to find the sum of the series $1+\frac{1}{3^2
 	\end{align*}
     }
 }
-\newline
+
+\bigskip
 \noindent
-c) Make plots of the finite approximnations 
+c) Make plots of the finite approximnations for $N = 0,1,2$ and compare them to $f$.
 
-for $N = 0,1,2$ and compare them to $f$.
-
+\medskip
 
 
 \noindent\fbox{
@@ -148,7 +148,7 @@ a) Show that if $n\neq m$, then $||\bf{e}_n-\bf{e}_m|| = \sqrt{2}$.
 	\begin{align*}
 		||\bf{e}_n-\bf{e}_m||  &= \sqrt{\langle \bf{e}_n -\bf{e}_m,\bf{e}_n -\bf{e}_m \rangle} \\
 	\end{align*}
-	Using the distributive property of $\langle \bf{u} + \bf{v} , \bf{w} \rangle = \langle \bf{u} , \bf{w} \rangle + \langle  + \bf{v} , \bf{w} \rangle$ :
+	Using the distributive property of $\langle \bf{u} + \bf{v} , \bf{w} \rangle = \langle \bf{u} , \bf{w} \rangle + \langle   \bf{v} , \bf{w} \rangle$ :
 	\begin{align*}
 		&= \sqrt{\langle \bf{e}_n, \bf{e}_n \rangle - 2 \langle \bf{e}_n, \bf{e}_m \rangle + \langle \bf{e}_m, \bf{e}_m \rangle } \\
 		&= \sqrt{1^2-2\cdot 0 + 1^2 } = \sqrt{2} \\
@@ -165,14 +165,28 @@ b) Let
 \end{align*}
 be the unit sphere in $V$. Show that $S$ is not compact.
 
-
+\medskip
 \noindent\fbox{
     \parbox{\textwidth}{
  	\noindent \\
+	In the unit sphere of $V$ we have $\bf{e_i }\in S$ for $i = 0,1,2,...$. 
+	Constructing a subsquence of the unit sphere $S_k = \{ e_{n_k}\}_{k=0}^N \subset \{e_n\}_{n=0}^N$, we can check for convergence by
+
+	\begin{align*}
+		||S_n -S|| < \epsilon \quad \text{for} \ n>N
+	\end{align*}
+	However from a) we have that 
+	\begin{align*}
+		||e_n -e_m|| = \sqrt{2}  \quad \text{for} \ n \neq m
+	\end{align*}
+	And so there is no convergent subsequence of $S$. Therefore $S$ is not compact.
+
 	
-	 https://wiki.math.ntnu.no/linearmethods/basicspaces/ballsandspheres
+	% https://wiki.math.ntnu.no/linearmethods/basicspaces/ballsandspheres
 	
-	
+	%"The sequence of points $(1,0,0,...) \ , \ (0,1,0,...) \ , \ (0,0,1,...)$ is a sequence of points on the sphere that has no convergent subsequence, because the distance between any two points is $\sqrt{2}$."	
+
+
     }
 }
 
@@ -181,10 +195,20 @@ be the unit sphere in $V$. Show that $S$ is not compact.
 Recall the Gram-Schmidt process from linear algebra: If $\{ \bf{v}_n\}_{n=0}^\infty$ is a linearly independent sequence in an inner product space $(V, \langle\cdot,\cdot\rangle)$, define a new sequence $\{\bf{u}\}_{n\in\mathbb{N}}$ by
 \\
 
+\begin{align*}
+	\mathbf{u}_0 &= \mathbf{v}_0 \\
+	\mathbf{u}_1 &= \mathbf{v}_1 -\frac{\langle \mathbf{v}_1 , \mathbf{u}_0 \rangle}{||\mathbf{u}_0||^2} \mathbf{u}_0\\
+	&\vdots \qquad \vdots \qquad \vdots \\
+	\mathbf{u}_n &= \mathbf{v}_n-\frac{\langle \mathbf{v}_n , \mathbf{u}_0 \rangle}{||\mathbf{u}_0||^2} \mathbf{u}_0 -\frac{\langle \mathbf{v}_n , \mathbf{u}_1 \rangle}{||\mathbf{u}_1||^2} \mathbf{u}_1 - \cdot \cdot \cdot \frac{\langle \mathbf{v}_n , \mathbf{u}_{n-1} \rangle}{||\mathbf{u}_{n-1}||^2} \mathbf{u}_{n-1} \\
+\end{align*}
+
+
 \noindent
 Then the new sequence is orthogonal (i.e. $\langle \bf{u}_i, \bf{u}_j \rangle = 0$ for $i \neq j$) and $\text{Span}(\bf{u}_0,\bf{u}_1,...,\bf{u}_n) = \text{Span}(\bf{v}_0,\bf{v}_1,...,\bf{v}_n) $ for all $n$. We get an orthonormal sequence $\{\bf{e}_n\}$ by putting $\bf{e}_n = \frac{\bf{u}_n}{||\bf{u}_n||}$.
 
-
+\newpage
+\medskip
+\noindent
 a) Let $V = C([0,1], \mathbb{R})$ and define an inner product on $V$ by
 
 \begin{align*}
@@ -198,21 +222,19 @@ Assume that we perform the Gram-Schmidt process on the polynomials $v_0(x)=1, v_
  	\noindent \\
 	To find $e_0(x), e_1(x)$ we have
 	\begin{align*}
-		e_0(x) &= v_0(x) = 1\\
-		e_1(x)&= v_1(x) - \frac{\langle v_0(x), v_1(x) \rangle}{\langle v_0(x), v_0(x) \rangle} v_0(x)
+		u_0(x) &= v_0(x) = 1\\
+		u_1(x)&= v_1(x) - \frac{\langle v_0(x), v_1(x) \rangle}{\langle v_0(x), v_0(x) \rangle} v_0(x)
 	\end{align*}
 	Calculating the inner products
 	\begin{align*}
-		\langle v_0(x), v_1(x) \rangle &= \int_0^1 1 \cdot x dx = \frac{1}{2} \\
-		\langle v_0(x), v_0(x) \rangle &= \int_0^1 1 \cdot 1 dx = 1
+		\langle v_0(x), v_1(x) \rangle &= \int_0^1 1 \cdot x \ dx = \frac{1}{2} \\
+		\langle v_0(x), v_0(x) \rangle &= \int_0^1 1 \cdot 1 \  dx = 1
 	\end{align*}
-
-	Dividng by the absolute value we get the orthonormal series. Absolute value of $e_1(x)$ is
+	Normalizing orthogonal vectors by their norms:
 	\begin{align*}
-		||e_1(x)||^2 &= \langle e_1(x), e_1(x) \rangle\\
-		  	      &= \int_0^1 (x-\frac{1}{2})^2 dx = \int_{-\frac{1}{2}}^{\frac{1}{2}} u^2 du\\
-			&= \frac{1}{3} \left[ \left( \frac{1}{2}\right)^3-\left( -\frac{1}{2}\right)^3\right]\\
-			&= \frac{1}{12}
+		||u_1(x)||^2 &= \langle u_1(x), u_1(x) \rangle\\
+		  	      &= \int_0^1 \left(x-\frac{1}{2}\right)^2 dx = \int_{-1/2}^{1/2} u^2 du\\
+			&= \frac{1}{3} \left[ \left( \frac{1}{2}\right)^3-\left( -\frac{1}{2}\right)^3\right] = \frac{1}{12}
 	\end{align*}	
 	And then we get the new, orthogonal vectors
 	\begin{align*}
@@ -222,30 +244,81 @@ Assume that we perform the Gram-Schmidt process on the polynomials $v_0(x)=1, v_
     }
 }
 
-
+\newpage
+\noindent
 b) Let $h\in V$ and assume that $\langle h, e_n \rangle = 0$ for $n=0,1,2,...$. Show that $\langle h, p \rangle = 0$ for all polynomials $p$.
+\medskip
 
 \noindent\fbox{
     \parbox{\textwidth}{
  	\noindent \\
-	Note: $h$ is "orthogonal" to every orthogonal vector. Therefore it must be orthogonal to every polynomial: Write this arguemnt but in "math".
-	https://math.stackexchange.com/questions/400331/show-that-a-vector-that-is-orthogonal-to-every-other-vector-is-the-zero-vector
+	Rewrite the polynomial $p$ to a linear combination
+	\begin{align*}
+		p = p_0 e_0(x) + p_1 e_1(x) + ... + p_n e_n(x)
+	\end{align*}
+	Taking the inner product with $h$:
+	\begin{align*}
+		\langle h, p \rangle &= \langle h, p_0 e_0(x) + p_1 e_1(x) + ... + p_n e_n(x) \rangle \\
+			&= \langle h, p_0 e_0(x) \rangle + \langle h, p_1 e_1(x) \rangle + ... + \langle h, p_n e_n(x) \rangle \\
+			&= p_0 \langle h, e_0(x) \rangle + p_1 \langle h, e_1(x) \rangle + ... + p_n \langle h, e_n(x) \rangle \\ 
+			&= p_0 \cdot 0 + p_1 \cdot 0 + ... + p_n \cdot 0 = 0
+	\end{align*}
+	With the assumption $\langle h, e_n \rangle = 0, \ \forall n \in \mathbb{N}$.
+
+	%Note: $h$ is "orthogonal" to every orthogonal vector. Therefore it must be orthogonal to every polynomial: Write this arguemnt but in "math".
+	%https://math.stackexchange.com/questions/400331/show-that-a-vector-that-is-orthogonal-to-every-other-vector-is-the-zero-vector
     }
 }
 
-
-
+\bigskip
+\noindent
 c) Show that $\langle h,h \rangle = 0$, and conclude that $h=0$.
-\\
+\medskip
+
 \noindent\fbox{
     \parbox{\textwidth}{
  	\noindent \\
-	
-		
+	Writing $h \in V$ into a linear combination of its orthonormal vectors $e_n(x)$ we get
+	\begin{align*}
+		h = h_0 e_0(x) + h_1 e_1(x) + ... h_n e_n(x)
+	\end{align*}
+	Taking the inner product of h on itself
+	\begin{align*}
+		\langle h, h \rangle &= \langle h, h_0 e_0(x) +  h_1 e_1(x) + ... h_n e_n(x) \rangle \\
+		 &= \langle h, h_0 e_0(x)\rangle + \langle h, h_1 e_1(x)\rangle+ ... + \langle h, h_n e_n(x)\rangle\\
+		 &= h_0 \langle h, e_0(x) \rangle + \langle h, e_1(x) \rangle + ... + \langle h, e_n(x) \rangle \\ 
+		&= h_0 \cdot 0 + h_1 \cdot 0 + ... + h_n \cdot 0 = 0
+	\end{align*}
+	As $\langle h, h \rangle = 0$ we conclude that $h = 0$ from definition 5.3.1 (iv) of inner products.
     }
 }
 
-d) Let $f\in V$ and put $\alpha_n = \langle f, e_n \rangle$. Assume that $g(x) = \sum_{n=0}^\infty \alpha_n e_n(x)$ is continous (the sum here is with respect to the norm $|| \cdot ||$ generated by $\langle \cdot, \cdot \rangle$, hence $\lim_{N\to\infty} ||g(x)-\sum_{n=0}^\infty \alpha_n e_n(x)|| = 0$). Show that $g=f$.
+\newpage
+\noindent
+d) Let $f\in V$ and put $\alpha_n = \langle f, e_n \rangle$. Assume that $g(x) = \sum_{n=0}^\infty \alpha_n e_n(x)$ is continous (the sum here is with respect to the norm $|| \cdot ||$ generated by $\langle \cdot, \cdot \rangle$, hence $\lim_{N\to\infty} ||g(x)-\sum_{n=0}^N \alpha_n e_n(x)|| = 0$). Show that $g=f$.
+\medskip
+
+\noindent\fbox{
+    \parbox{\textwidth}{
+ 	\noindent \\
+	We have $f \in V$ which can be written as a linear combination as
+	\begin{align*}
+		f = \sum_{n=0}^\infty f_n e_n = f_0 e_0 + f_1 e_1 + ... + f_n e_n + ...
+	\end{align*}
+
+	and we have defined $\alpha_n$ as $\alpha_n = \langle f, e_n \rangle$. 
+	Calculating the inner product 
+	\begin{align*}
+		\alpha_n = \langle f, e_n \rangle &=  \langle f_0 e_0 + f_1 e_1 + ... + f_n e_n + ...\ ,\ e_n \rangle \\
+							&= f_n
+	\end{align*}
+	Since we have 
+	\begin{align*}
+		g(x) = \sum_{n=0}^\infty \alpha_n e_n(x) =\sum_{n=0}^\infty f_n e_n(x) = f(x)
+	\end{align*}
+	We therefore conclude that $g=f$.
+    }
+}
 
 
 
